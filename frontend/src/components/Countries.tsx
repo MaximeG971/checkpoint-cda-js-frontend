@@ -49,7 +49,6 @@ export default function Countries() {
 
   return (
     <div>
-      <h1>Countries</h1>
       <form onSubmit={handleSubmit} className="country-form">
         <div className="form-group">
           <label htmlFor="name">Name</label>

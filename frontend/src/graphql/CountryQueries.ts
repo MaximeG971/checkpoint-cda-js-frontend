@@ -11,12 +11,32 @@ export const GET_ALL_COUNTRIES = gql`
   }
 `;
 
-export const CREATE_NEW_COUNTRY = gql`
-  mutation Mutation($data: NewCountryInput!) {
-    addCountry(data: $data) {
-      name
-      emoji
+export const GET_ALL_COUNTRIES_WITH_CONTINENT = gql`
+  query Query {
+    countries {
       code
+      continent {
+        name
+        id
+      }
+      emoji
+      id
+      name
+    }
+  }
+`;
+
+export const GET_COUNTRY_BY_CODE = gql`
+  query Query($code: String!) {
+    country(code: $code) {
+      code
+      name
+      id
+      emoji
+      continent {
+        name
+        id
+      }
     }
   }
 `;
