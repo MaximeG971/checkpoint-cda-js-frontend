@@ -11,7 +11,7 @@ import schemaPromise from "./schema";
 const port = process.env.SERVER_PORT || 4000;
 
 const allowedOrigins =
-  process.env.CORS_ALLOWED_ORIGINS || "http://localhost:3001";
+  process.env.CORS_ALLOWED_ORIGINS || "http://localhost:3000";
 
 schemaPromise.then(async (schema) => {
   await db.initialize();
